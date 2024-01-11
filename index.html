@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calculater-outerscreen">
+      <div class="full-container">
+        <input placeholder="0" class="input"> 
+        <button onclick="clear()">cl</button>
+        <button onclick="del()">del</button>
+        <button onclick="s('%')">%</button>
+        <button onclick="s('/')">/</button>
+        <button onclick="s('7')">7</button>
+        <button onclick="s('8')">8</button>
+        <button onclick="s('9')">9</button>
+        <button onclick="s('*')">*</button>
+        <button onclick="s('4')">4</button>
+        <button onclick="s('5')">5</button>
+        <button onclick="s('6')">6</button>
+        <button onclick="s('-')">-</button>
+        <button onclick="s('1')">1</button>
+        <button onclick="s('2')">2</button>
+        <button onclick="s('3')">3</button>
+        <button onclick="s('0')">0</button>
+        <button onclick="cal()" class="cal">=</button>
+        <button class="kar" onclick="k()">Ks</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+     var input=document.querySelector(".input")
+     function s(num){
+      input.value +=num
+     }
+     function cal(){
+      input.value=eval(input.value)
+     }
+     function clear(){
+          input.value="" ; 
+     }
+    function del(){
+      input.value=input.value.slice(0,-1);
+    }   
+     function k(){
+      alert("hello karthi bro how is my work ")
+     }
+</script>
